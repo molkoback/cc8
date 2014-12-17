@@ -29,6 +29,9 @@ static int rom_read(const char *path, uint8_t *mem)
 		return -1;
 	}
 	
+	/* The most programs begin at memory location 512 becaus CHIP-8
+	 * interpreter itself occupies the first 512 bytes on the original
+	 * systems. */
 	i = 512;
 	while((c = getc(fh)) != EOF){
 		if(i > 4095){

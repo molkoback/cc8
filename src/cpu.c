@@ -30,6 +30,9 @@ void cpu_reset(CPU *cpu)
 	size_t i;
 	srand(time(0));
 	
+	/* The most programs begin at memory location 512 becaus CHIP-8
+	 * interpreter itself occupies the first 512 bytes on the original
+	 * systems. */
 	cpu->pc = 512;
 	memset(cpu->mem, 0, 4096 * sizeof (uint8_t));
 	

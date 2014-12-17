@@ -67,8 +67,12 @@ int video_draw(uint8_t  display[32][64])
 			rect.y = i * 10;
 			
 			if(display[i][j] == 0){
+				
+				/* Background square. */
 				SDL_SetRenderDrawColor(rend, 18, 18, 18, 255);
 			}else{
+				
+				/* Front square. */
 				SDL_SetRenderDrawColor(rend, 84, 255, 84, 255);
 			}
 			SDL_RenderFillRect(rend, &rect);
