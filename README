@@ -1,6 +1,11 @@
 A shitty and simple CHIP-8 emulator written in C.
 http://en.wikipedia.org/wiki/CHIP-8
 
+REQUIREMENTS
+------------
+
+SDL2: https://www.libsdl.org
+
 
 INSTALL
 -------
@@ -26,3 +31,11 @@ Keys
   +-+-+-+-+
   |Z|X|C|V|
   +-+-+-+-+
+
+
+THANKS
+------
+
+These guys:
+http://blog.alexanderdickson.com/javascript-chip-8-emulator
+http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter

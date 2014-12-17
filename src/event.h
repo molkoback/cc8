@@ -17,7 +17,7 @@
 /* Returns 1 if SDL_QUIT has occured. */
 int event_checkQuit(void);
 
-/* Returns currently pressed keys as integer. */
+/* Returns currently pressed keys as 16 bit uint. 1 bit = 1 key. */
 uint16_t event_getKeys(void);
 
 #endif

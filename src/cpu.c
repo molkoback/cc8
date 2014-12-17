@@ -48,7 +48,7 @@ void cpu_reset(CPU *cpu)
 	cpu->quit = 0;
 }
 
-/* One emulator cycle. Returns -1 if we want to quit. */
+/* One emulator cycle. */
 void cpu_cycle(CPU *cpu)
 {
 	uint16_t op;
@@ -56,6 +56,7 @@ void cpu_cycle(CPU *cpu)
 	int i;
 	#endif
 	
+	/* Check if SQL_QUIT event has occured. */
 	if((cpu->quit = event_checkQuit()) != 0){
 		return;
 	}
@@ -64,6 +65,8 @@ void cpu_cycle(CPU *cpu)
 	op = (cpu->mem[cpu->pc] << 8) | cpu->mem[cpu->pc + 1];
 	
 	#if DEBUG == 1
+	
+	/* Debug shit */
 	fprintf(stdout, "%04X: %04X", cpu->pc, op);
 	
 	if(handle_op(cpu, op) < 0){
@@ -86,11 +89,14 @@ void cpu_cycle(CPU *cpu)
 	handle_op(cpu, op);
 	#endif
 	
+	/* Increment by 2 because one operation is two bytes long. */
 	cpu->pc += 2;
 	if(cpu->pc > 4095){
 		fprintf(stderr, "PC reached the maximum value\n");
 		cpu->quit = 1;
 	}
+	
+	/* Handle timers. */
 	if(cpu->dt > 0){
 		(cpu->dt)--;
 	}
@@ -366,6 +372,9 @@ static int handle_op(CPU *cpu, uint16_t op)
 				/* Wait for keypress and store to vx. */
 				case 0x000A:
 					while((j = event_getKeys()) == 0){
+						
+						/* Update SDL events so we get the keypresses and
+						 * check if SDL_QUIT has occured. */
 						if((cpu->quit = event_checkQuit()) != 0){
 							break;
 						}

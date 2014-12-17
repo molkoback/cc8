@@ -50,7 +50,7 @@ typedef struct{
 /* Resets machine. */
 void cpu_reset(CPU *cpu);
 
-/* One emulator cycle. Returns -1 if we want to quit. */
+/* One emulator cycle. */
 void cpu_cycle(CPU *cpu);
 
 #endif

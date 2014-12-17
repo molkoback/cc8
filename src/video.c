@@ -19,7 +19,8 @@ static SDL_Renderer *rend = NULL;
 static SDL_Window *win = NULL;
 static SDL_Rect rect;
 
-/* Initializes SDL_Window and SLD_Renderer. Returns -1 on failure. */
+/* Initializes SDL_Window and SLD_Renderer and stuff. Returns -1 on
+ * failure. */
 int video_init(void)
 {
 	if(SDL_Init(SDL_INIT_VIDEO) < 0){
