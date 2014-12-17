@@ -1,0 +1,28 @@
+A shitty and simple CHIP-8 emulator written in C.
+http://en.wikipedia.org/wiki/CHIP-8
+
+
+INSTALL
+-------
+
+  make && make install
+
+
+USAGE
+-----
+
+  cc8 PATH_TO_ROM_FILE
+
+
+Keys
+----
+
+  +-+-+-+-+
+  |1|2|3|4|
+  +-+-+-+-+
+  |Q|W|E|R|
+  +-+-+-+-+
+  |A|S|D|F|
+  +-+-+-+-+
+  |Z|X|C|V|
+  +-+-+-+-+
