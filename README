@@ -4,7 +4,7 @@ http://en.wikipedia.org/wiki/CHIP-8
 REQUIREMENTS
 ------------
 
-SDL2: https://www.libsdl.org
+  SDL2: https://www.libsdl.org
 
 
 INSTALL
@@ -36,6 +36,6 @@ Keys
 THANKS
 ------
 
-These guys:
-http://blog.alexanderdickson.com/javascript-chip-8-emulator
-http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter
+  These guys:
+  http://blog.alexanderdickson.com/javascript-chip-8-emulator
+  http://www.multigesture.net/articles/how-to-write-an-emulator-chip-8-interpreter
