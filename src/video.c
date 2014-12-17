@@ -49,7 +49,7 @@ int video_init(void)
 	return -1;
 }
 
-/* Clean up SDL on exit. */
+/* Call SDL clean up functions. */
 void video_quit(void)
 {
 	SDL_DestroyRenderer(rend);
@@ -57,7 +57,7 @@ void video_quit(void)
 	SDL_Quit();
 }
 
-/* Draw the display. */
+/* Render display. */
 int video_draw(uint8_t  display[32][64])
 {
 	size_t i, j;

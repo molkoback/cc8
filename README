@@ -1,25 +1,26 @@
 A shitty and simple CHIP-8 emulator written in C.
 http://en.wikipedia.org/wiki/CHIP-8
 
-REQUIREMENTS
+
+requirements
 ------------
 
   SDL2: https://www.libsdl.org
 
 
-INSTALL
+install
 -------
 
   make && make install
 
 
-USAGE
+usage
 -----
 
   cc8 PATH_TO_ROM_FILE
 
 
-Keys
+keys
 ----
 
   +-+-+-+-+
@@ -33,7 +34,7 @@ Keys
   +-+-+-+-+
 
 
-THANKS
+thanks
 ------
 
   These guys:

@@ -18,10 +18,10 @@
  * failure. */
 int video_init(void);
 
-/* Clean up SDL variables. */
+/* Call SDL clean up functions. */
 void video_quit(void);
 
-/* Draw the display. */
+/* Render display. */
 int video_draw(uint8_t display[32][64]);
 
 #endif

@@ -60,6 +60,7 @@ int main(int argc, char *argv[])
 	}
 	
 	if(video_init() < 0){
+		video_quit();
 		return 1;
 	}
 	
