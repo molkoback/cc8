@@ -67,9 +67,12 @@ int main(int argc, char *argv[])
 	while(cpu.quit == 0){
 		cpu_cycle(&cpu);
 		video_draw(cpu.display);
+		
+		/*
 		if(cpu.st == 1){
-			printf("BEEP\n");
+			beep();
 		}
+		*/
 	}
 	 
 	video_quit();

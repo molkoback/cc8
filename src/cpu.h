@@ -31,7 +31,7 @@ typedef struct{
 	uint16_t i;
 	
 	/* Delay and sound timers. Both cound down from 60 until they reach
-	 * 0. */
+	 * 0. CHIP-8 makes sound when sound timer is 1. */
 	uint8_t dt, st;
 	
 	/* Stack. Stores subroutine return pointers. */
